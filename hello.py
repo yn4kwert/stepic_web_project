@@ -1,5 +1,5 @@
 def wsgi_app(environ, start_response):
-    #
+    print(environ)
     status = '200 OK'
     headers = [
         ('Content-Type', 'text/plain')
