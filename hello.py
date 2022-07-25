@@ -7,5 +7,6 @@ def wsgi_app(environ, start_response):
     #body = [(i + '\n') for i in environ['QUERY_STRING'].split('&')]
     body = [bytes(i + '\n', 'ascii') for i in environ['QUERY_STRING'].split('&')]
     print(headers)
+    print('\n\n', body)
     start_response(status, headers)
     return body
